@@ -1,6 +1,6 @@
 # A [Giter8 template](http://www.foundweekends.org/giter8/Combined+Pages.html#Usage) for production-grade scala-sbt starter code [for usage with sbt new](https://www.scala-sbt.org/1.x/docs/sbt-new-and-Templates.html) #
 
-For more information (quite a lot of information) about what's included in this quickstart, [refer to /src/main/g8/README.md](https://github.com/sbchapin/quickstart-scala-sbt.g8/src/master/src/main/g8/).
+For more information (quite a lot of information) about what's included in this quickstart, [refer to /src/main/g8/README.md](https://github.com/sbchapin/quickstart-scala-sbt.g8/blob/master/src/main/g8/README.md).
 
 This information will come along with the template, so you may just want to get on with that.
 
