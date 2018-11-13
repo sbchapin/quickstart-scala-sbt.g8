@@ -1,4 +1,4 @@
-package com.sbchapin
+package $package$
 
 import $package$.hello.Greeter
 import $package$.args._
