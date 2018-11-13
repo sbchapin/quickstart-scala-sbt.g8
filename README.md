@@ -1,11 +1,13 @@
 # A [Giter8 template](http://www.foundweekends.org/giter8/Combined+Pages.html#Usage) for production-grade scala-sbt starter code [for usage with sbt new](https://www.scala-sbt.org/1.x/docs/sbt-new-and-Templates.html) #
 
-For more information (quite a lot of information) about what's included in this quickstart, [refer to /src/main/g8/README.md](https://github.com/sbchapin/quickstart-scala-sbt.g8/blob/master/src/main/g8/README.md).
+[![Build Status](https://travis-ci.org/sbchapin/quickstart-scala-sbt.g8.svg?branch=master)](https://travis-ci.org/sbchapin/quickstart-scala-sbt.g8)
 
-This information will come along with the template, so you may just want to get on with that.
+For more information (quite a lot of information) about what's included in this quickstart, [refer to /src/main/g8/README.md](https://github.com/sbchapin/quickstart-scala-sbt.g8/blob/master/src/main/g8/).
+
+This information will come along with the template, so __you may just want to get on with that__.
 
 
-## To get started immediately: ##
+# To get started immediately: #
 
 ```bash
 sbt new sbchapin/quickstart-scala-sbt.g8
@@ -24,6 +26,33 @@ It will ask you three questions:
 
 - `sbt` 1.x or higher (or an older sbt with giter8 plugin configured)
 - little-to-no [understanding of giter8 or sbt new](https://www.scala-sbt.org/1.x/docs/sbt-new-and-Templates.html)
+
+# To develop this: #
+```bash
+# Fork it: (https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/)
+# ...then...
+# Get your fork:
+git clone git@github.com:{YOUR_NAME_HERE}/quickstart-scala-sbt.g8.git
+cd quickstart-scala-sbt.g8
+git remote add upstream git@github.com:sbchapin/quickstart-scala-sbt.g8.git
+
+# Test it continuously: (will extract the project then run tests inside extracted project)
+sbt ~test
+
+# Change it:
+git checkout -b cool-feature-branch
+echo 'Sam sucks' >> README.md
+git commit -am 'Stating the evident'
+
+# Test it one last time:
+sbt test
+
+# Push it:
+git push origin cool-feature-branch
+
+# Pull request it:
+# https://github.com/sbchapin/quickstart-scala-sbt.g8/pulls
+```
 
 ## LICENSE ##
 This template is distributed without any warranty and dedicated to public domain under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
