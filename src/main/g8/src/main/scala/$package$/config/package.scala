@@ -1,6 +1,6 @@
 package $package$
 
-import com.typesafe.config.ConfigFactory
+import pureconfig.ConfigSource
 
 package object config {
 
@@ -49,7 +49,7 @@ package object config {
     //
     // Pureconfig also provides the scala stuff, like:
     // - Compile-time config mapping to typesafe config (via macros)
-    // - Integrtion with shapeless for non-uniform configs (!)
+    // - Integration with shapeless for non-uniform configs (!)
     //
     //
     // These are much more comprehensive than scopt, so read as you need it.
@@ -58,13 +58,11 @@ package object config {
     // TODO: Move the data type "Configuration" along with the configuration parsing process, then test them (or remove them from your project).
     // TODO: As your project grows, revisit pureconfig to see how you can decompose your config into smaller pieces (and how to namespace it).
 
-    // 1.
-    // TODO: Depending on the usage of your program, this may need to be more flexible (won't path correctly if being delegated, maybe this is a file input by user, etc...)
-    val defaultConfig = ConfigFactory.defaultApplication().resolve()
-
-    // 2.
-    // TODO: Depending on the usage of your program, this may need to be a bit more durable (how do you proceed when it fails to load, malformed, etc...):
-    val loadedConfig = pureconfig.loadConfigOrThrow[Configuration](defaultConfig)
+    // TODO: Depending on the usage of your program, this may need to be
+    //  1. more flexible (won't path correctly if being delegated, maybe this is a file input by user, etc...)
+    //  2. more durable (how do you proceed when it fails to load, malformed, etc...):
+    import pureconfig.generic.auto._
+    val loadedConfig = ConfigSource.default.loadOrThrow[Configuration]
 
     loadedConfig
   }

@@ -28,7 +28,7 @@ package object args {
     * @param defaultName a default name to give to args
     * @return parsed Arguments.
     */
-  def parseArguments(rawArgs: Seq[String], defaultName: String): Arguments = {
+  def parseArguments(rawArgs: Array[String], defaultName: String): Arguments = {
     // Defaulted arguments instance
     val defaultArguments = Arguments(
       name = defaultName
@@ -69,7 +69,7 @@ package object args {
         .action((newName, conf) => conf.copy(name = newName))
     }
 
-    argParser.parse(rawArgs, defaultArguments).getOrElse(defaultArguments)
+    argParser.parse(rawArgs.toSeq, defaultArguments).getOrElse(defaultArguments)
   }
 
 
