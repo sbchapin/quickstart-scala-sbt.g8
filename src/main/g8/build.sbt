@@ -21,10 +21,10 @@ lazy val root = (project in file("."))
 
     // Logging:
     libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
-    libraryDependencies += "org.slf4j" % "slf4j-api" % "1.7.25",                                 // slf4j as logging interface
-    libraryDependencies += "org.apache.logging.log4j" % "log4j-slf4j-impl" % "2.11.1" % Runtime, // bridge: slf4j -> log4j
-    libraryDependencies += "org.apache.logging.log4j" % "log4j-api" % "2.11.1" % Runtime,        // log4j as logging mechanism
-    libraryDependencies += "org.apache.logging.log4j" % "log4j-core" % "2.11.1" % Runtime,       // log4j as logging mechanism
+    libraryDependencies += "org.slf4j" % "slf4j-api" % "1.7.29",                                 // slf4j as logging interface
+    libraryDependencies += "org.apache.logging.log4j" % "log4j-slf4j-impl" % "2.12.1" % Runtime, // bridge: slf4j -> log4j
+    libraryDependencies += "org.apache.logging.log4j" % "log4j-api" % "2.12.1" % Runtime,        // log4j as logging mechanism
+    libraryDependencies += "org.apache.logging.log4j" % "log4j-core" % "2.12.1" % Runtime,       // log4j as logging mechanism
 
     // Testing:
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.8" % Test,
